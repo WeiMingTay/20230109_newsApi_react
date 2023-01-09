@@ -1,0 +1,42 @@
+.news {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	padding: 4rem;
+	article {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		justify-content: space-between;
+        border-radius: 20px;
+        overflow: hidden;
+		div {
+            height: 250px;
+            overflow: hidden;
+            display: grid;
+            place-content: center;
+			img {
+				width: 100%;
+                transition: all 250ms;
+
+                &:hover {
+                    scale: 1.1;
+                }
+			}
+		}
+        date {
+            text-align: end;
+        }
+		a {
+            text-align: center;
+			padding: 0.25rem 1rem;
+			background-color: #000;
+			color: #fff;
+            
+            text-decoration: none;
+            &:hover {
+                font-weight: 600;
+            }
+		}
+	}
+}
