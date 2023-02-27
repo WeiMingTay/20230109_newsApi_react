@@ -45,13 +45,13 @@ const News = () => {
 
 	//fetch
 	const API_KEY = "61a51e6230e145a2b1bda71a11df1048";
-	let url = `https://newsapi.org/v2/everything?q=${input}&from=2023-01-01&sortBy=publishedAt&apiKey=${API_KEY}`;
+/* 	let url = `https://newsapi.org/v2/everything?q=${input}&from=2023-01-01&sortBy=publishedAt&apiKey=${API_KEY}`; */
 
 	let [news, setNews] = useState([]);
-	console.log(url);
+
 
 	useEffect(() => {
-		fetch(url)
+		fetch(`https://newsapi.org/v2/everything?q=${input}&from=2023-01-01&sortBy=publishedAt&apiKey=${API_KEY}`)
 			.then((response) => response.json())
 			.then((data) => {
 				setNews(data.articles);

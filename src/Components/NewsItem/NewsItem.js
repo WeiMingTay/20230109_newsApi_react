@@ -1,4 +1,4 @@
-import Collapsible from "react-collapsible";
+/* import Collapsible from "react-collapsible"; */
 
 const NewsItem = (props) => {
 	const options = {
